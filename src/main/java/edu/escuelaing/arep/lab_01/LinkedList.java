@@ -38,11 +38,13 @@ public class LinkedList implements List<Nodo>{
             primero = nod;
             ultimo = nod;
             flag = true;
+            size += 1;
         }
         else if (size > 0){
             ultimo.setNext(nod);
             ultimo = nod;
             flag =  true;
+            size += 1;
         }
         else{
             flag =false ;
@@ -51,9 +53,10 @@ public class LinkedList implements List<Nodo>{
     }
     
     
-
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return size;
+        
     }
 
     public boolean isEmpty() {
@@ -105,7 +108,17 @@ public class LinkedList implements List<Nodo>{
     }
 
     public Nodo get(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Nodo encontrado = null;
+        if ( index <= size && index >= 0 ){
+            encontrado = primero;
+            for (int i = 0;i <= index;i++){
+                encontrado = encontrado.getNext();
+            }
+        }
+        else{
+            System.out.println("Posicion fuera de rango");
+        }
+        return encontrado; 
     }
 
     public Nodo set(int index, Nodo element) {
@@ -148,7 +161,7 @@ public class LinkedList implements List<Nodo>{
             Nodo adelante = tem.getNext();
             atras.setNext(adelante);
             adelante.setBack(atras);
-            
+            size -= 1;
         }
         else{
             System.out.println("Posicion fuera de rango");
