@@ -43,5 +43,15 @@ public class Nodo {
     public double getNum() {
         return num;
     }
+
+	public boolean equalsNodo(Nodo nodo) {
+		boolean flag = false;
+		if (num == nodo.getNum()) {
+			flag = true;
+		}
+		return flag;
+	}
+
+	
     
 }

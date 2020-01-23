@@ -108,17 +108,24 @@ public class LinkedList implements List<Nodo>{
     }
 
     public Nodo get(int index) {
-        Nodo encontrado = null;
-        if ( index <= size && index >= 0 ){
-            encontrado = primero;
-            for (int i = 0;i <= index;i++){
-                encontrado = encontrado.getNext();
+        try {
+        	Nodo encontrado = null;
+        	if ( index <= size && index >= 0 ){
+                encontrado = primero;
+                for (int i = 0;i<index-1;i++){
+                    encontrado = encontrado.getNext();
+                }
             }
-        }
-        else{
-            System.out.println("Posicion fuera de rango");
-        }
-        return encontrado; 
+            else{
+                System.out.println("Posicion fuera de rango");
+            }
+            return encontrado;
+            
+		} catch (Exception e) {
+			return null;
+		}
+        
+         
     }
 
     public Nodo set(int index, Nodo element) {
