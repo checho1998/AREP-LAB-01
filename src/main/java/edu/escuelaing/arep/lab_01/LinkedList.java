@@ -23,13 +23,16 @@ public class LinkedList implements List<Nodo>{
     public LinkedList(){
         
     }
+    
     /**
      * retorna el tamaño de la LinkedList
-     * @return int 
+     * @return size 
      */
     public int getSize() {
         return size;
     }
+    
+    
     /**
      * cambia el tamaño de la LinkedList
      * @param size
@@ -40,8 +43,8 @@ public class LinkedList implements List<Nodo>{
     
     /**
      * Este metodo agrega un nodo al final de la LinkedList
-     * @param Nodo nodo a ingresar
-     * @return boolean si se pudo agregar o no
+     * @param nod
+     * @return flag
      */
     
     public boolean add(Nodo nod){
@@ -67,7 +70,7 @@ public class LinkedList implements List<Nodo>{
     
     /**
      * retorna el tamaño de la LinkedList
-     * @return size tamaño
+     * @return size
      */
     public int size() {
         
@@ -125,8 +128,8 @@ public class LinkedList implements List<Nodo>{
     /**
      * Este metodo retorna el nodo de la posicion que se le indica
      * 
-     * @param int index
-     * @return Nodo 
+     * @param index
+     * @return encontrado 
      */
     public Nodo get(int index) {
         try {
@@ -176,8 +179,8 @@ public class LinkedList implements List<Nodo>{
     }
     /**
      * Este metodo retorna el nodo eliminado de la LinkedList
-     * @param int index
-     * @return Nodo
+     * @param index
+     * @return tem
      */
 
     public Nodo remove(int index) {
