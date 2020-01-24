@@ -23,14 +23,26 @@ public class LinkedList implements List<Nodo>{
     public LinkedList(){
         
     }
-
+    /**
+     * retorna el tamaño de la LinkedList
+     * @return int 
+     */
     public int getSize() {
         return size;
     }
-
+    /**
+     * cambia el tamaño de la LinkedList
+     * @param size
+     */
     public void setSize(int size) {
         this.size = size;
     }
+    
+    /**
+     * Este metodo agrega un nodo al final de la LinkedList
+     * @param Nodo nodo a ingresar
+     * @return boolean si se pudo agregar o no
+     */
     
     public boolean add(Nodo nod){
         boolean flag; 
@@ -53,7 +65,10 @@ public class LinkedList implements List<Nodo>{
         return flag;
     }
     
-    
+    /**
+     * retorna el tamaño de la LinkedList
+     * @return size tamaño
+     */
     public int size() {
         
         return size;
@@ -107,7 +122,12 @@ public class LinkedList implements List<Nodo>{
     public void clear() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    /**
+     * Este metodo retorna el nodo de la posicion que se le indica
+     * 
+     * @param int index
+     * @return Nodo 
+     */
     public Nodo get(int index) {
         try {
         	Nodo encontrado = null;
@@ -154,6 +174,11 @@ public class LinkedList implements List<Nodo>{
     public List<Nodo> subList(int fromIndex, int toIndex) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    /**
+     * Este metodo retorna el nodo eliminado de la LinkedList
+     * @param int index
+     * @return Nodo
+     */
 
     public Nodo remove(int index) {
         Nodo tem = null;

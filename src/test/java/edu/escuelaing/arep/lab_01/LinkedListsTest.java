@@ -6,6 +6,10 @@ import org.junit.Test;
 
 public class LinkedListsTest {
 	
+	/**
+     * Prueba para agregar un nodo 
+     * de una LinkedList
+     */
     @Test
     public void pruebaAgregarLinkedList () {
         Nodo nod1 = new Nodo(186.0);
@@ -16,7 +20,10 @@ public class LinkedListsTest {
         assertTrue(nod1.equalsNodo(list.get(1)));
         assertTrue(nod2.equalsNodo(list.get(2)));
     }
-    
+    /**
+     * Prueba para Borrar un nodo 
+     * de una LinkedList
+     */
     @Test
     public void pruebaBorrarNodoLinkedList () {
     	Nodo nod1 = new Nodo(186.0);
@@ -29,7 +36,10 @@ public class LinkedListsTest {
         list.remove(2);
         assertTrue(list.getSize()==2);
     }
-    
+    /**
+     * Prueba para comprobar la Media 
+     * de una LinkedList
+     */
     @Test
     public void pruebaLinkedListMedia () {
     	Calculos calculadora = new Calculos();
@@ -43,7 +53,10 @@ public class LinkedListsTest {
         calculadora.media(list);
         assertTrue(calculadora.media(list) == 20.0);
     }
-    
+    /**
+     * Prueba para comprobar la Desviacion estandar 
+     * de una LinkedList
+     */
     @Test
     public void pruebaLinkedListDesviacionEstandar () {
     	Calculos calculadora = new Calculos();
