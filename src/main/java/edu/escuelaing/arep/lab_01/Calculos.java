@@ -20,7 +20,7 @@ public class Calculos {
         
         double suma = 0.0;
         
-        for (int i=0; i<=list.size() ; i++  ){
+        for (int i=1;i<=list.size() ; i++  ){
             suma += list.get(i).getNum();
         }
         return suma;
@@ -36,11 +36,13 @@ public class Calculos {
     public double desviacionEstandar(LinkedList list){
         double media = media(list);
         double suma = 0.0; 
-        for (int i=0; i<=list.size() ; i++ ){
+        for (int i=1; i<=list.size() ; i++ ){
+        	
             suma += Math.pow(list.get(i).getNum()-media, 2);
         }
-        
         double res = Math.sqrt(suma/(list.size()-1));
+        res = Math.round(res*100.0)/100.0;
+        
         return res;
     }
     

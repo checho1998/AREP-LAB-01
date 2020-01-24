@@ -41,6 +41,7 @@ public class LinkedList implements List<Nodo>{
             size += 1;
         }
         else if (size > 0){
+            nod.setBack(ultimo);
             ultimo.setNext(nod);
             ultimo = nod;
             flag =  true;
@@ -124,8 +125,6 @@ public class LinkedList implements List<Nodo>{
 		} catch (Exception e) {
 			return null;
 		}
-        
-         
     }
 
     public Nodo set(int index, Nodo element) {
@@ -157,22 +156,32 @@ public class LinkedList implements List<Nodo>{
     }
 
     public Nodo remove(int index) {
-        
-        Nodo encontrado = null;
-        if ( index <= size && index >= 0 ){
-            Nodo tem = primero;
-            for (int i = 0;i <= index;i++){
-                tem = tem.getNext();
+        Nodo tem = null;
+        if ( index <= size && index-1 >= 0 ){
+            tem = primero;
+            if (index != 1) {
+            	for (int i = 0;i < index-1;i++){
+                    tem = tem.getNext();
+                }
+            	if (ultimo.equalsNodo(tem)) {
+            		ultimo = ultimo.getBack();
+            		ultimo.setNext(null);
+            		size-=1;
+            	}
+            	else {
+            		Nodo atras = tem.getBack();
+                    Nodo adelante = tem.getNext();
+                    atras.setNext(adelante);
+                    adelante.setBack(atras);
+                    tem.setBack(null);
+                    tem.setNext(null);
+                    size -= 1;
+            	}
             }
-            Nodo atras = tem.getBack();
-            Nodo adelante = tem.getNext();
-            atras.setNext(adelante);
-            adelante.setBack(atras);
-            size -= 1;
         }
         else{
-            System.out.println("Posicion fuera de rango");
+            
         }
-        return encontrado;
+        return tem;
     }
 }
