@@ -12,15 +12,15 @@ Se realizo este repositorio cumpliendo con los requerimientos de un problema pla
 ## Como Instalarla:
 1. Clonar el este Git
 
-![Imagenes](https://github.com/DavidDiaz1949/Taller-Complex-Systems/blob/master/imagenes/clon.PNG)
+![Imagenes](https://github.com/checho1998/AREP-LAB-01/blob/master/imagenes/clon.PNG)
 
 2. En su CMD o consola ingresar mvn package
 
-![Imagenes](https://github.com/DavidDiaz1949/Taller-Complex-Systems/blob/master/imagenes/package.PNG)
+![Imagenes](https://github.com/checho1998/AREP-LAB-01/blob/master/imagenes/package.PNG)
 
 3. En su CMD o consola ingresar mvn test
 
-![Imagenes](https://github.com/DavidDiaz1949/Taller-Complex-Systems/blob/master/imagenes/test.PNG)
+![Imagenes](https://github.com/checho1998/AREP-LAB-01/blob/master/imagenes/test.PNG)
 
 ## Pruebas del programa
 
